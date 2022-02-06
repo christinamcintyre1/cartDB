@@ -97,8 +97,7 @@ const products = [
         if (item[0].instock == 0) return;
         item[0].instock = item[0].instock - 1;
         
-      // console.log(`add to Cart ${JSON.stringify(item)}`);
-      setCart([...cart, ...item]);
+       setCart([...cart, ...item]);
     };
   
     const deleteCartItem = (index) => {
