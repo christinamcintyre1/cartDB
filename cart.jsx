@@ -204,20 +204,19 @@ const products = [
         </Row>
         <Row>
           <form
-            onSubmit={(event) => {
-              restockProducts(`${query}`);
-              console.log(`Restock called on ${query}`);
-              event.preventDefault();
-              console.log(items);
-            }}
-          >
-            <input
-              type="text"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-            />
-            <button type="submit">ReStock Products</button>
-          </form>
+          onSubmit={(event) => {
+            restockProducts(`http://localhost:1337/${query}`);
+            console.log(`Restock called on ${query}`);
+            event.preventDefault();
+          }}
+        >
+          <input
+            type="text"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+          />
+          <button type="submit">ReStock Products</button>
+        </form>
         </Row>
       </Container>
     );
