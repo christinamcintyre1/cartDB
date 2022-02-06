@@ -96,7 +96,7 @@ const products = [
         let item = items.filter((item) => item.name == name && item.id == id);
         if (item[0].instock == 0) return;
         item[0].instock = item[0].instock - 1;
-        debugger
+        
       // console.log(`add to Cart ${JSON.stringify(item)}`);
       setCart([...cart, ...item]);
     };
