@@ -127,9 +127,9 @@ const products = [
       return (
         <Card key={index}>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey={1 + index}>
+            <Accordion as={Button} variant="link" eventKey={1 + index}>
               {item.name}
-            </Accordion.Toggle>
+            </Accordion>
           </Card.Header>
           <Accordion.Collapse
             onClick={() => deleteCartItem(index)}
