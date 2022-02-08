@@ -164,17 +164,15 @@ const products = [
     };
     
     const restockProducts = (url) => {
-      console.log('url is:' + url);
+      //console.log('url is:' + url);
       doFetch(url);
       console.log(data.data);
   
       let newItems = data.data.map((item) => {
-        let name = item.attributes.name;
-        let country = item.attributes.country;
-        let cost = item.attributes.cost;
-        let instock = item.attributes.instock;
+      let newItems = data.map((item) => {
+      let { name, country, cost, instock } = item.props;
         let id = Math.floor(Math.random() * 1000) + item.id;
-        console.log(name, country, cost, instock, id);
+        //console.log(name, country, cost, instock, id);
   
         return { name, country, cost, instock, id }
       });
